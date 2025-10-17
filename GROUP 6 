@@ -1,0 +1,41 @@
+#1 Built-in Function (len)
+tasks = ["review", "deploy",  "test"]
+print("Total task:", len(tasks))
+
+#2 LAMDA FUNCTION WITH STRING
+names = ["Warren","Andy", "Johan"]
+uppercase_names = list(map(lambda x: x.upper(), names))
+print(uppercase_names)
+
+#3 Default Parameter
+def format_name(first_name, last_name="", title='Mr./Ms.'):
+    return f"{title}{first_name}{last_name}"
+print(format_name("Gin","bacus"))
+
+
+#4  USER DEFINED FUNCTIONS
+def greet(name):
+    print(f"Hello, {name}!")
+
+greet("Justin")
+
+#5 HIGHER ORDER FUNCTION
+def double(x):
+    return x*2
+numbers = [1, 2, 3, 4, 5]
+double_numbers = list(map(double,numbers))
+print(double_numbers)   
+
+
+ #6 variable length keywords
+def greet(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+greet(name="John", age=30, city="New york")
+
+#7 KEYWORD ARGUMENT
+def make_event(name, priority):
+    return name, priority
+print(make_event(name="Hello", priority="Ellie"))
+
